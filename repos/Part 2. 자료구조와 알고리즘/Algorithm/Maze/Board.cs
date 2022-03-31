@@ -12,6 +12,9 @@ namespace Maze
         public TileType[,] Tile { get; private set; }    //배열
         public int Size { get; private set; }
 
+        public int DestY { get; private set; }
+        public int DestX { get; private set; }
+
         Player _player;
 
         public enum TileType
@@ -28,6 +31,9 @@ namespace Maze
 
             Tile = new TileType[size, size];
             Size = size;
+
+            DestY = Size - 2;
+            DestX = Size - 2;
 
             // Mazes for Programmers
             //GenerateByBinaryTree();
@@ -150,6 +156,8 @@ namespace Maze
                     // 플레이어 좌표를 갖고 와서, 그 좌표랑 현재 y, x가 일치하면 플레이어 전용 색상으로 표시
                     if (y == _player.PosY && x == _player.PosX)
                         Console.ForegroundColor = ConsoleColor.Blue;
+                    else if (y == DestY && x == DestX)
+                        Console.ForegroundColor = ConsoleColor.Yellow;
                     else
                         Console.ForegroundColor = GetTileColor(Tile[y, x]);
                     
