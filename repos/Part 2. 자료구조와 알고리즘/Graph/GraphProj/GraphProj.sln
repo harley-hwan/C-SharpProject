@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32602.291
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphProj", "GraphProj\GraphProj.csproj", "{CF7EBBD6-274F-4D40-B340-E3DDBE489D73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphProj", "GraphProj\GraphProj.csproj", "{CF7EBBD6-274F-4D40-B340-E3DDBE489D73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MazeBFS", "MazeBFS\MazeBFS.csproj", "{B8B882EA-DD5C-45C5-A571-27C47A8F1AA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MazeDijkstra", "MazeDijkstra\MazeDijkstra.csproj", "{D8F164AB-7AF1-4178-B867-26A709CEEA83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{CF7EBBD6-274F-4D40-B340-E3DDBE489D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF7EBBD6-274F-4D40-B340-E3DDBE489D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF7EBBD6-274F-4D40-B340-E3DDBE489D73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8B882EA-DD5C-45C5-A571-27C47A8F1AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8B882EA-DD5C-45C5-A571-27C47A8F1AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8B882EA-DD5C-45C5-A571-27C47A8F1AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8B882EA-DD5C-45C5-A571-27C47A8F1AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8F164AB-7AF1-4178-B867-26A709CEEA83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8F164AB-7AF1-4178-B867-26A709CEEA83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8F164AB-7AF1-4178-B867-26A709CEEA83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8F164AB-7AF1-4178-B867-26A709CEEA83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
