@@ -11,7 +11,7 @@ namespace MazeDijkstra
             { 15, -1, 05, 10, -1, -1 },
             { -1, 05, -1, -1, -1, -1 },
             { 35, 10, -1, -1, 05, -1 },
-            { -1, -1, -1, 05, -1, -1 },
+            { -1, -1, -1, 05, -1, 05 },
             { -1, -1, -1, -1, 05, -1 },
         };
 
@@ -19,10 +19,12 @@ namespace MazeDijkstra
         {
             bool[] visited = new bool[6];
             int[] distance = new int[6];
+            int[] parent = new int[6];
 
             Array.Fill(distance, Int32.MaxValue);
 
             distance[start] = 0;
+            parent[start] = start;
 
             while (true)
             {
@@ -70,6 +72,7 @@ namespace MazeDijkstra
                     if (nextDist < distance[next])
                     {
                         distance[next] = nextDist;
+                        parent[next] = now;
                     }
                 }
             }
@@ -106,8 +109,6 @@ namespace MazeDijkstra
                 }
             }
         }
-
-
 
         // 1) 우선 now부터 방문하고,
         // 2) now와 연결된 정점들을 하나씩 확인해서, 아직 미발견(미방문) 상태라면 방문한다.
