@@ -49,10 +49,25 @@ namespace Tree
                 PrintTree(child);
         }
 
+        static int GetHeight(TreeNode<string> root)
+        {
+            int height = 0;
+
+            foreach (TreeNode<string> child in root.Children)
+            {
+                int newHeight = GetHeight(child) + 1;
+                //if (height < newHeight)
+                //    height = newHeight;
+                height = Math.Max(height, newHeight);
+            }
+            return height;
+        }
+
         static void Main(string[] args)
         {
             TreeNode<string> root = MakeTree();
-            PrintTree(root);
+            //PrintTree(root);
+            Console.WriteLine(GetHeight(root));
         }            
     }
 }
